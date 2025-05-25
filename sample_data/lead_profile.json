@@ -1,0 +1,74 @@
+{
+  "name": "Sarah Chen",
+  "email": "sarah.chen@techinnovate.com",
+  "job_title": "VP of Engineering",
+  "company": "TechInnovate Solutions",
+  "company_size": 150,
+  "industry": "Technology",
+  "location": "San Francisco, CA",
+  "linkedin_url": "https://linkedin.com/in/sarahchen-vp",
+  "phone": "+1-555-0123",
+  "lead_source": "LinkedIn Sales Navigator",
+  "lead_score": 85,
+  "company_info": {
+    "website": "https://techinnovate.com",
+    "founded_year": 2018,
+    "funding_stage": "Series B",
+    "employee_count": 150,
+    "headquarters": "San Francisco, CA",
+    "description": "B2B SaaS platform for workflow automation and team collaboration",
+    "technologies": ["React", "Node.js", "AWS", "MongoDB"],
+    "recent_news": [
+      "Raised $25M Series B funding in Q3 2024",
+      "Launched new AI-powered workflow features",
+      "Expanded team by 40% in the last 6 months"
+    ]
+  },
+  "role_info": {
+    "department": "Engineering",
+    "team_size": 25,
+    "reports_to": "CTO",
+    "years_in_role": 2,
+    "years_at_company": 3,
+    "previous_companies": ["Google", "Stripe"],
+    "specialization": "Full-stack development, DevOps, team leadership"
+  },
+  "engagement_history": {
+    "previous_outreach": false,
+    "email_engagement": "unknown",
+    "social_media_activity": "active_on_linkedin",
+    "content_interests": ["engineering leadership", "team scaling", "DevOps", "AI/ML"]
+  },
+  "intent_signals": [
+    "Recently posted about hiring challenges on LinkedIn",
+    "Company job postings indicate rapid scaling",
+    "Mentioned infrastructure challenges in recent podcast interview",
+    "Attending upcoming DevOps conference as speaker"
+  ],
+  "contact_preferences": {
+    "preferred_channel": "email",
+    "time_zone": "PST",
+    "likely_available": "Tuesday-Thursday, 10am-4pm PST",
+    "communication_style": "direct, technical, results-oriented"
+  },
+  "pain_points": [
+    "Scaling engineering team rapidly while maintaining code quality",
+    "Managing infrastructure costs as company grows",
+    "Implementing better DevOps practices and CI/CD pipelines",
+    "Balancing technical debt with feature development"
+  ],
+  "goals_objectives": [
+    "Build a world-class engineering organization",
+    "Improve development velocity and deployment frequency",
+    "Implement robust monitoring and observability",
+    "Foster engineering culture and best practices"
+  ],
+  "budget_authority": {
+    "estimated_budget": "$500K-1M annually",
+    "budget_cycle": "Annual with quarterly reviews",
+    "decision_influence": "High - technical decisions",
+    "approval_process": "Collaborates with CTO and CEO on major purchases"
+  },
+  "last_updated": "2024-01-15T10:30:00Z",
+  "data_source": "enriched_from_sales_intelligence_platform"
+}

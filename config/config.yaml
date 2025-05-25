@@ -1,0 +1,142 @@
+# Outbound Sales Crew Configuration
+# This file contains settings for the automated outbound sales system
+
+# Crew Configuration
+crew:
+  name: "Outbound Sales Crew"
+  version: "1.0.0"
+  description: "Automated outbound sales system with lead enrichment and personalized email generation"
+  
+# Agent Settings
+agents:
+  research_agent:
+    role: "Lead Research Specialist"
+    max_iterations: 3
+    memory_enabled: true
+    verbose: true
+    
+  email_agent:
+    role: "Sales Email Specialist" 
+    max_iterations: 2
+    memory_enabled: true
+    verbose: true
+    
+  followup_agent:
+    role: "Follow-up Communication Specialist"
+    max_iterations: 2
+    memory_enabled: true
+    verbose: true
+
+# OpenAI Configuration
+openai:
+  model: "gpt-4o"  # Latest OpenAI model as of May 2024
+  temperature: 0.7
+  max_tokens: 1500
+  timeout: 30
+  
+# Email Generation Settings
+email_settings:
+  cold_email:
+    max_words: 200
+    min_words: 150
+    include_subject: true
+    personalization_required: true
+    
+  followup_emails:
+    count: 2
+    timing:
+      first_followup: 3  # days after initial email
+      second_followup: 7  # days after initial email
+    max_words: 150
+    min_words: 100
+    
+# Campaign Settings
+campaign:
+  default_duration_days: 7
+  tracking_enabled: true
+  metrics:
+    - "open_rate"
+    - "reply_rate" 
+    - "meeting_scheduled"
+    - "positive_response"
+    
+# Lead Enrichment Settings
+lead_enrichment:
+  company_size_categories:
+    small: 
+      max_employees: 50
+      characteristics: ["startup", "agile", "resource-conscious"]
+    medium:
+      max_employees: 500
+      characteristics: ["growing", "establishing processes", "scaling"]
+    large:
+      max_employees: 9999999
+      characteristics: ["enterprise", "complex", "compliance-focused"]
+      
+  role_analysis:
+    c_level:
+      keywords: ["ceo", "cto", "cmo", "cfo", "founder", "president"]
+      priorities: ["strategic decisions", "company growth", "revenue optimization"]
+      communication_style: "high-level, results-focused"
+      
+    technical_leadership:
+      keywords: ["cto", "vp engineering", "head of tech", "engineering director"]
+      priorities: ["technical innovation", "team productivity", "system reliability"]
+      communication_style: "technical depth, solution-oriented"
+      
+    marketing_leadership:
+      keywords: ["cmo", "marketing director", "head of marketing", "vp marketing"]
+      priorities: ["lead generation", "brand growth", "marketing roi"]
+      communication_style: "metrics-driven, creative solutions"
+      
+    sales_leadership:
+      keywords: ["sales director", "vp sales", "head of sales", "sales manager"]
+      priorities: ["revenue growth", "sales efficiency", "team performance"] 
+      communication_style: "results-focused, competitive advantage"
+      
+    hr_leadership:
+      keywords: ["hr", "people", "talent", "human resources"]
+      priorities: ["employee experience", "talent retention", "culture"]
+      communication_style: "people-first, collaborative"
+
+# Industry Insights
+industry_insights:
+  technology:
+    trends: ["AI adoption", "cloud migration", "cybersecurity", "remote work tools"]
+    challenges: ["scaling infrastructure", "talent acquisition", "rapid innovation"]
+    
+  healthcare:
+    trends: ["digital transformation", "patient experience", "telemedicine", "compliance"]
+    challenges: ["data security", "cost management", "regulatory changes"]
+    
+  finance:
+    trends: ["fintech disruption", "digital banking", "blockchain", "regulatory compliance"]
+    challenges: ["legacy modernization", "regulatory compliance", "customer experience"]
+    
+  retail:
+    trends: ["omnichannel", "personalization", "supply chain", "sustainability"]
+    challenges: ["inventory management", "customer acquisition", "digital transformation"]
+    
+  default:
+    trends: ["digital transformation", "operational efficiency", "customer experience"]
+    challenges: ["process optimization", "technology adoption", "competitive pressure"]
+
+# Success Benchmarks
+benchmarks:
+  cold_email_open_rate: "20-25%"
+  cold_email_reply_rate: "2-5%"
+  followup_engagement_lift: "10-15%"
+  meeting_conversion: "1-3%"
+  
+# Error Handling
+error_handling:
+  max_retries: 3
+  timeout_seconds: 30
+  fallback_responses: true
+  
+# Logging
+logging:
+  level: "INFO"
+  include_timestamps: true
+  log_api_calls: true
+  log_generated_content: false  # Set to false for privacy in production
