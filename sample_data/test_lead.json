@@ -1,0 +1,74 @@
+{
+  "name": "Michael Rodriguez",
+  "email": "michael.rodriguez@retailmax.com",
+  "job_title": "Chief Marketing Officer",
+  "company": "RetailMax",
+  "company_size": 2500,
+  "industry": "Retail",
+  "location": "Chicago, IL",
+  "linkedin_url": "https://linkedin.com/in/michaelrodriguez-cmo",
+  "phone": "+1-312-555-0199",
+  "lead_source": "Industry Conference",
+  "lead_score": 92,
+  "company_info": {
+    "website": "https://retailmax.com",
+    "founded_year": 2010,
+    "funding_stage": "Public Company",
+    "employee_count": 2500,
+    "headquarters": "Chicago, IL",
+    "description": "Multi-channel retail chain with 300+ stores and growing e-commerce platform",
+    "technologies": ["Shopify Plus", "Salesforce", "Adobe Analytics", "Klaviyo"],
+    "recent_news": [
+      "Opened 25 new stores in Q4 2024",
+      "Launched new mobile app with AR features",
+      "Announced sustainability initiative across all locations"
+    ]
+  },
+  "role_info": {
+    "department": "Marketing",
+    "team_size": 45,
+    "reports_to": "CEO",
+    "years_in_role": 3,
+    "years_at_company": 5,
+    "previous_companies": ["Target", "Nordstrom", "Macy's"],
+    "specialization": "Omnichannel marketing, customer experience, digital transformation"
+  },
+  "engagement_history": {
+    "previous_outreach": false,
+    "email_engagement": "unknown",
+    "social_media_activity": "active_on_linkedin_and_twitter",
+    "content_interests": ["retail innovation", "customer experience", "marketing automation", "sustainability"]
+  },
+  "intent_signals": [
+    "Recently spoke at conference about customer experience transformation",
+    "Company job postings indicate digital marketing expansion",
+    "Mentioned challenges with customer data unification in recent interview",
+    "Following several marketing technology vendors on social media"
+  ],
+  "contact_preferences": {
+    "preferred_channel": "email",
+    "time_zone": "CST",
+    "likely_available": "Monday-Friday, 9am-5pm CST",
+    "communication_style": "metrics-driven, strategic, results-focused"
+  },
+  "pain_points": [
+    "Unifying customer data across multiple channels",
+    "Improving marketing ROI and attribution",
+    "Managing customer acquisition costs",
+    "Creating consistent brand experience across all touchpoints"
+  ],
+  "goals_objectives": [
+    "Increase customer lifetime value by 25%",
+    "Improve marketing attribution and ROI measurement",
+    "Build unified customer profiles across all channels",
+    "Drive sustainable growth through improved retention"
+  ],
+  "budget_authority": {
+    "estimated_budget": "$2M-5M annually",
+    "budget_cycle": "Annual with quarterly reviews",
+    "decision_influence": "High - marketing technology decisions",
+    "approval_process": "Works with CEO and CFO on major technology investments"
+  },
+  "last_updated": "2024-01-15T14:20:00Z",
+  "data_source": "conference_lead_capture"
+}
