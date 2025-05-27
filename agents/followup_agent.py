@@ -31,8 +31,7 @@ class FollowUpAgent:
             Your messages are brief, friendly, and always give the recipient an easy way out.""",
             verbose=True,
             allow_delegation=False,
-            max_iter=2,
-            memory=True
+            max_iter=2
         )
     
     def generate_followup_sequence(self, enriched_lead_profile, original_email, product_info):
@@ -103,7 +102,11 @@ class FollowUpAgent:
                 temperature=0.8
             )
             
-            result = json.loads(response.choices[0].message.content)
+            content = response.choices[0].message.content
+            if content:
+                result = json.loads(content)
+            else:
+                raise Exception("Empty response from OpenAI")
             
             # Calculate send date
             send_date = datetime.now() + timedelta(days=days_after)

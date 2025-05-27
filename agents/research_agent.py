@@ -17,17 +17,23 @@ class LeadResearchAgent:
         """Create and return the lead research agent."""
         return Agent(
             role="Lead Research Specialist",
-            goal="Enrich lead profiles with comprehensive company and role-specific insights",
+            goal="Enrich lead profiles with comprehensive company and role-specific insights for personalized outreach",
             backstory="""You are an expert B2B sales researcher with deep knowledge of 
             company structures, industry trends, and professional roles. You excel at 
             gathering relevant context about prospects and their organizations to enable 
             highly personalized outreach. Your research helps sales teams understand 
-            pain points, company priorities, and the best approach for each lead.""",
+            pain points, company priorities, and the best approach for each lead.
+            
+            You always return your analysis in a structured JSON format that includes:
+            - Enriched lead profile with additional context
+            - Company size analysis and characteristics
+            - Role-specific priorities and communication preferences
+            - Industry insights and trends
+            - Identified pain points and personalization hooks""",
             tools=[self.search_tool] if os.getenv("SERPER_API_KEY") else [],
             verbose=True,
             allow_delegation=False,
-            max_iter=3,
-            memory=True
+            max_iter=3
         )
     
     def enrich_lead_data(self, lead_profile):

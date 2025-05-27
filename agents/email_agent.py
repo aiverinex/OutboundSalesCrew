@@ -21,17 +21,19 @@ class EmailDraftingAgent:
         """Create and return the email drafting agent."""
         return Agent(
             role="Sales Email Specialist",
-            goal="Create compelling, personalized cold outreach emails that drive engagement and responses",
+            goal="Create compelling, personalized cold outreach emails using OpenAI that drive engagement and responses",
             backstory="""You are a master of B2B sales communication with years of experience 
             crafting emails that get opened, read, and responded to. You understand the psychology 
             of decision-makers and know how to present value propositions in a way that resonates 
             with busy professionals. Your emails are conversational, benefit-focused, and always 
             include clear calls-to-action. You avoid generic templates and instead create authentic, 
-            human-sounding messages that build genuine connections.""",
+            human-sounding messages that build genuine connections.
+            
+            You use OpenAI to generate personalized content and always return emails in JSON format
+            with 'subject' and 'body' fields, ensuring 150-200 word length and professional tone.""",
             verbose=True,
             allow_delegation=False,
-            max_iter=2,
-            memory=True
+            max_iter=2
         )
     
     def generate_cold_email(self, enriched_lead_profile, product_info):
@@ -69,7 +71,11 @@ class EmailDraftingAgent:
                 temperature=0.7
             )
             
-            result = json.loads(response.choices[0].message.content)
+            content = response.choices[0].message.content
+            if content:
+                result = json.loads(content)
+            else:
+                raise Exception("Empty response from OpenAI")
             return {
                 "type": "cold_email",
                 "subject": result.get("subject", ""),
