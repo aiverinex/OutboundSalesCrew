@@ -118,30 +118,39 @@
       "With the current Technology trends around AI adoption, cloud migration"
     ]
   },
-  "campaign_created_at": "2025-05-25T05:28:51.686418",
+  "campaign_created_at": "2025-05-27T06:02:06.792002",
+  "crew_execution": {
+    "research_completed": true,
+    "agents_used": [
+      "research_agent",
+      "email_agent",
+      "followup_agent"
+    ],
+    "crewai_workflow": true
+  },
   "emails": {
     "cold_email": {
       "type": "cold_email",
-      "subject": "Boosting TechInnovate\u2019s Efficiency with AI-Powered DevOps",
-      "body": "Hi Sarah,\n\nI hope this message finds you well. As the VP of Engineering at TechInnovate Solutions, I imagine you\u2019re constantly exploring ways to enhance operational efficiency and streamline team coordination, especially with the rapid adoption of AI and cloud technologies.\n\nI wanted to introduce you to our DevOps Acceleration Platform, designed specifically for tech-driven companies like yours. Our AI-powered solution automates CI/CD pipelines, which has helped companies reduce deployment times by 60% and cut infrastructure costs by 30%. This could be a game-changer for your team, allowing you to focus more on innovation while we handle the nitty-gritty of deployment and monitoring.\n\nMany mid-size tech companies have already seen significant improvements in their development velocity without sacrificing reliability, and I believe TechInnovate Solutions could experience similar benefits.\n\nWould you be open to a brief chat? I\u2019d love to learn more about your current challenges and explore how we might support your goals.\n\nLooking forward to your thoughts.\n\nBest,\n\n[Your Name]",
-      "generated_at": "2025-05-25T05:28:47.895522"
+      "subject": "Boosting Efficiency with AI-Powered DevOps, Sarah?",
+      "body": "Hi Sarah,\n\nI hope this finds you well. As the VP of Engineering at TechInnovate Solutions, I imagine you're constantly navigating the intricacies of operational efficiency and team coordination, especially with the tech world's shift towards AI and cloud solutions.\n\nI wanted to introduce you to our DevOps Acceleration Platform. It's an AI-powered tool designed to automate your CI/CD pipelines, significantly cutting deployment times by 60% and reducing infrastructure costs by 30%. Imagine the impact on your team\u2019s efficiency and your ability to scale effectively!\n\nSeveral mid-size tech companies like yours have already seen remarkable improvements in code quality and operational overhead reduction. Our 24/7 intelligent monitoring system also ensures reliability without the constant manual oversight.\n\nIf this aligns with your goals at TechInnovate, I'd love to share a brief demo or case study that highlights how we\u2019ve helped others achieve their operational targets.\n\nLet me know if you\u2019re open to a quick chat or if there\u2019s someone else on your team who handles these inquiries.\n\nBest,\n\n[Your Name]\n[Your Company]\n[Contact Information]",
+      "generated_at": "2025-05-27T06:01:58.874886"
     },
     "followups": [
       {
         "type": "followup_1",
-        "subject": "Exploring AI's Role in Streamlining DevOps",
-        "body": "Hi Sarah,\n\nI hope this finds you well! I wanted to follow up on my previous email about our DevOps Acceleration Platform. Given your interest in AI adoption, I thought you might find this recent case study insightful: it showcases how a company similar to TechInnovate reduced deployment times by over 60% using AI-driven strategies. \n\nI'm curious to hear your thoughts on AI's role in streamlining DevOps processes. Do you see similar opportunities or challenges in your current setup?\n\nIf you\u2019d like to delve deeper, I\u2019d be happy to arrange a brief chat at your convenience.\n\nPlease let me know if you prefer not to receive these emails.\n\nWarm regards,\n\n[Your Name]",
+        "subject": "Discovering Next-Level Efficiency in AI, Sarah",
+        "body": "Hi Sarah,\n\nI hope this message finds you well! I wanted to follow up on our previous discussion about the DevOps Acceleration Platform. I came across an insightful article discussing how leading companies are not only adopting AI but also integrating it with cloud services to revolutionize their operations. This approach aligns well with the trends we've noticed in AI adoption and cloud migration.\n\nWould love to hear your thoughts on this perspective or any challenges you foresee!\n\nIf you\u2019re interested, I can also share a short case study on how a client in a similar space reduced their deployment times significantly using our platform.\n\nLet me know if you\u2019d like to explore this further or prefer not to receive these updates.\n\nBest,\n\n[Your Name]",
         "send_after_days": 3,
-        "suggested_send_date": "2025-05-28T05:28:50.038038",
-        "generated_at": "2025-05-25T05:28:50.038054"
+        "suggested_send_date": "2025-05-30T06:02:02.990179",
+        "generated_at": "2025-05-27T06:02:02.990196"
       },
       {
         "type": "followup_2",
-        "subject": "Exploring AI Trends in DevOps for 2024",
-        "body": "Hi Sarah,\n\nI hope this message finds you well. As TechInnovate Solutions continues to lead in AI adoption, I thought you might find this recent case study on reducing deployment times using AI in DevOps particularly relevant. It mirrors some of the key benefits we discussed in my last email.\n\nI\u2019d love to hear your thoughts on how TechInnovate is navigating these trends. If you're interested, I can also connect you with one of our specialists for a brief chat on how we're seeing industry leaders tackle these challenges.\n\nPlease feel free to let me know if you're not interested in further communication.\n\nBest regards,\n\n[Your Name]",
+        "subject": "Exploring AI Trends Together, Sarah?",
+        "body": "Hi Sarah,\n\nI hope this message finds you well. Last week, we discussed how our DevOps Acceleration Platform can enhance operational efficiency. Today, I wanted to share a recent case study from a peer in your industry who achieved remarkable results with AI adoption.\n\nThis story highlights how they reduced deployment times significantly while cutting costs. If you're interested, I'd be happy to connect you with someone from their team for a quick chat.\n\nAdditionally, I'd love to hear your thoughts on the current AI trends in engineering\u2014particularly around cloud migration and its impact on infrastructure.\n\nIf now isn't the right time, just let me know, and I won't reach out again. Otherwise, I'm here whenever you're ready to explore this further.\n\nBest regards,\n\n[Your Name]",
         "send_after_days": 7,
-        "suggested_send_date": "2025-06-01T05:28:51.686397",
-        "generated_at": "2025-05-25T05:28:51.686413"
+        "suggested_send_date": "2025-06-03T06:02:06.791979",
+        "generated_at": "2025-05-27T06:02:06.791996"
       }
     ]
   },
@@ -167,21 +176,21 @@
       "day": 0,
       "action": "Send cold email",
       "email_type": "cold_email",
-      "subject": "Boosting TechInnovate\u2019s Efficiency with AI-Powered DevOps",
+      "subject": "Boosting Efficiency with AI-Powered DevOps, Sarah?",
       "status": "ready"
     },
     {
       "day": 3,
       "action": "Send followup_1",
       "email_type": "followup_1",
-      "subject": "Exploring AI's Role in Streamlining DevOps",
+      "subject": "Discovering Next-Level Efficiency in AI, Sarah",
       "status": "scheduled"
     },
     {
       "day": 7,
       "action": "Send followup_2",
       "email_type": "followup_2",
-      "subject": "Exploring AI Trends in DevOps for 2024",
+      "subject": "Exploring AI Trends Together, Sarah?",
       "status": "scheduled"
     }
   ],
