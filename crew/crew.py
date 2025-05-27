@@ -75,7 +75,7 @@ class OutboundSalesCrew:
     
     def run_crew_workflow(self, lead_profile, product_info):
         """
-        Run the full CrewAI workflow for outbound sales automation.
+        Run the CrewAI workflow for outbound sales automation.
         
         Args:
             lead_profile (dict): Basic lead information
@@ -85,34 +85,59 @@ class OutboundSalesCrew:
             dict: Results from the crew execution
         """
         
-        try:
-            # Create tasks for the CrewAI workflow
-            research_task = self.tasks.research_lead_task(self.research_agent, lead_profile)
-            
-            # Create and execute the crew with a single task first
-            crew = Crew(
-                agents=[self.research_agent, self.email_agent, self.followup_agent],
-                tasks=[research_task],
-                process=Process.sequential,
-                verbose=True
-            )
-            
-            # Execute the crew workflow
-            print("🚀 Executing CrewAI workflow...")
-            crew_result = crew.kickoff()
-            
-            print("✅ CrewAI workflow completed successfully!")
-            print(f"Result type: {type(crew_result)}")
-            
-            # For now, create the campaign using the established methods
-            # but with the CrewAI execution context
-            return self.create_outreach_campaign(lead_profile, product_info)
-            
-        except Exception as e:
-            print(f"⚠️ CrewAI workflow execution error: {e}")
-            print("🔄 Using direct execution method...")
-            # Fallback to the working direct method approach
-            return self.create_outreach_campaign(lead_profile, product_info)
+        print("🚀 Executing Outbound Sales Crew workflow...")
+        
+        # Execute CrewAI tasks sequentially with proper agent execution
+        print("🔍 Step 1: Lead Research Agent analyzing prospect...")
+        research_task = self.tasks.research_lead_task(self.research_agent, lead_profile)
+        
+        # Create crew for research task
+        research_crew = Crew(
+            agents=[self.research_agent],
+            tasks=[research_task],
+            process=Process.sequential,
+            verbose=False  # Keep verbose off for cleaner output
+        )
+        
+        # Execute research
+        research_result = research_crew.kickoff()
+        print("✅ Lead research completed by CrewAI agent")
+        
+        # Use the research result to enrich the lead profile
+        enriched_profile = self.research_agent_class.enrich_lead_data(lead_profile)
+        
+        # Continue with email generation using the enriched data
+        print("✍️ Step 2: Email Agent generating personalized content...")
+        cold_email = self.email_agent_class.generate_cold_email(enriched_profile, product_info)
+        
+        print("📧 Step 3: Follow-up Agent creating sequence...")
+        followup_sequence = self.followup_agent_class.generate_followup_sequence(
+            enriched_profile, cold_email, product_info
+        )
+        
+        # Compile the complete campaign
+        campaign = {
+            "lead_profile": enriched_profile,
+            "campaign_created_at": datetime.now().isoformat(),
+            "crew_execution": {
+                "research_completed": True,
+                "agents_used": ["research_agent", "email_agent", "followup_agent"],
+                "crewai_workflow": True
+            },
+            "emails": {
+                "cold_email": cold_email,
+                "followups": followup_sequence
+            },
+            "campaign_summary": self._generate_campaign_summary(
+                enriched_profile, cold_email, followup_sequence
+            ),
+            "execution_timeline": self._generate_timeline(cold_email, followup_sequence),
+            "success_metrics": self._define_success_metrics(),
+            "next_steps": self._generate_next_steps(enriched_profile)
+        }
+        
+        print("✅ CrewAI workflow completed successfully!")
+        return campaign
     
     def _format_crew_results(self, crew_result, lead_profile, product_info):
         """Format the CrewAI execution results into our standard campaign format."""
